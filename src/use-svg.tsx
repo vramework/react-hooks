@@ -18,3 +18,14 @@ export const useSVG = (svgName: string, className: string = 'w-4 h-4', color: st
         preProcessor={code => code.replace(/fill=".*?"/g, `fill="${color}"`).replace(/width=".*?"/g, '').replace(/height=".*?"/g, '')}
     />
 }
+
+export const useSVGOriginal = (svgName: string, className: string = 'w-4 h-4') => {
+    const defaultIcon: DefaultIconKeys = 'generic'
+    return <SVG
+        className={className}
+        src={`/svg/${svgName}`}
+        cacheRequests={true}
+        loader={defaultIcons[defaultIcon] || null}
+        preProcessor={code => code.replace(/width=".*?"/g, '').replace(/height=".*?"/g, '')}
+    />
+}

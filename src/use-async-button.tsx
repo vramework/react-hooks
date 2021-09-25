@@ -20,7 +20,7 @@ export const useAsyncButton = (Button: React.FunctionComponent<ButtonProps>, cla
           setState('saved')
           await new Promise(resolve => setTimeout(resolve, 250))
           setState('initial')
-        } catch (e) {
+        } catch (e: any) {
           // Probably already unmounted
         }
     }, [onClick])

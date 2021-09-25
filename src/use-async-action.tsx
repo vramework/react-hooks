@@ -27,7 +27,7 @@ export const useAsyncAction = <T extends AsyncFunction>(callback: T, { complete,
                     complete(result)
                 }, 100)
             }
-        } catch (e) {
+        } catch (e: any) {
             console.error(e)
             setError(e)
             setState('error')

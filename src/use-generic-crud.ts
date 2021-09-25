@@ -103,7 +103,7 @@ export const useGenericGetUpdate = <Type extends Object>(
         setState('saved')
         await new Promise(resolve => setTimeout(resolve, options?.minSaveDuration || 250))
         setState('ready')
-      } catch (e) {
+      } catch (e: any) {
         await new Promise(resolve => setTimeout(resolve, options?.minSaveDuration || 250))
         setState('error')
         setSaveError(e.message)
