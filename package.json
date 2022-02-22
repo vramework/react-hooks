@@ -1,6 +1,6 @@
 {
   "name": "@vramework/hooks",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "author": "Vlandor LTD",
   "main": "dist/index.js",
