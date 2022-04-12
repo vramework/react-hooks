@@ -1,3 +1,10 @@
+
+## 0.0.6 12.03.2022
+
+### Chore
+
+Bumping up react version
+
 ## 0.0.5 20.02.2022
 
 ### Adding CI
