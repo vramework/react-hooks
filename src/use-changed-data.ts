@@ -51,13 +51,13 @@ export const useChangedData = <T extends unknown>(original: T): ChangedDataHook<
   useEffect(() => {
     mergeChange()
   }, [original])
-  const onChange = useCallback((value, field) => {
+  const onChange = useCallback((value: any, field: string) => {
     if ((cd.current as any)[field] !== value) {
       (cd.current as any)[field] = value
       mergeChange()
     }
   }, [])
-  const onChanges = useCallback((data) => {
+  const onChanges = useCallback((data: Record<string, any>) => {
     cd.current = { ...cd.current, ...data }
     mergeChange()
   }, [])
@@ -67,7 +67,7 @@ export const useChangedData = <T extends unknown>(original: T): ChangedDataHook<
     mergeChange()
   }, [])
   const [fieldsWithErrors, setFieldsWithErrors] = useState<string[]>([])
-  const onDataError = useCallback((hasError, field) => {
+  const onDataError = useCallback((hasError: boolean, field: string) => {
     const errors = new Set(fieldsWithErrors)
     if (hasError) {
       errors.add(field)

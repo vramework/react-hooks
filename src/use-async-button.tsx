@@ -6,6 +6,7 @@ export interface ButtonProps {
     onClick?: VoidFunction
     className?: string
     disabled?: boolean
+    children: any
 }
 
 export const useAsyncButton = (Button: React.FunctionComponent<ButtonProps>, className: string, content: React.ReactElement | string, disabled: boolean, onClick: () => Promise<unknown>) => {
