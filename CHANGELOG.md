@@ -1,3 +1,8 @@
+## 0.0.7 13.03.2022
+
+### Chore
+
+Make react dependency a peerDependency
 
 ## 0.0.6 12.03.2022
 
